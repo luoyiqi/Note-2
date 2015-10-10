@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fresh.note.ListNote" >
+
+    <ListView
+        android:id="@+id/listView_note"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout1_1"
+        android:layout_centerHorizontal="true" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/plusone_button"
+        android:weightSum="10" >
+
+        <Button
+            android:id="@+id/btnaddnew"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@drawable/button_customized"
+            android:drawableTop="@android:drawable/ic_input_add"
+            android:onClick="onClickaddNewBtn"
+            android:text="New" />
+
+        <Button
+            android:id="@+id/filter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@drawable/plusone_button"
+            android:drawableTop="@android:drawable/ic_input_get"
+            style="?android:attr/buttonStyleSmall"
+            android:onClick="onClickFilter"
+            android:text="Filter" />
+
+        <EditText
+            android:id="@+id/search_box"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+             android:layout_weight="2"
+             android:hint="search" />
+    </LinearLayout>
+
+</RelativeLayout>

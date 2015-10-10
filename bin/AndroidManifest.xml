@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fresh.note"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ListNote"
+            android:label="@string/title_activity_list_note" >
+        </activity>
+        <activity
+            android:name=".View_Note"
+            android:label="@string/title_activity_view__note" >
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name=".EditNote"
+            android:label="@string/title_activity_edit_note" >
+        </activity>
+        <activity
+            android:name=".NewNote"
+            android:label="@string/title_activity_new_note" >
+        </activity>
+        <activity
+            android:name=".TextColour"
+            android:label="@string/title_activity_text_colour" >
+        </activity>
+        <activity
+            android:name=".BackgroudColour"
+            android:label="@string/title_activity_backgroud_colour" >
+        </activity>
+        <activity
+            android:name=".About"
+            android:label="@string/title_activity_about" 
+             android:theme="@android:style/Theme.Dialog">
+        </activity>
+    </application>
+
+</manifest>

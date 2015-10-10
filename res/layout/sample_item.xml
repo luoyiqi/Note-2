@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFF99"
+        android:padding="10dp" >
+    
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10" >
+
+        <TextView
+            android:id="@+id/sample_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:text="num" />
+        
+       
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"            
+            android:text="Last updated" 
+            android:layout_weight="1"/>
+        
+        <TextView
+            android:id="@+id/last_updated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"            
+            android:text="0-0-0" 
+            android:textColor="#993300"
+            android:layout_weight="1"/>
+        
+    </TableRow>
+    
+    
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableRow1"
+        android:text="Note Title"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+    
+</RelativeLayout>

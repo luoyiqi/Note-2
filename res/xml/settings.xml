@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <ListPreference
+     android:title="Colour"
+     android:key="change application colour"
+     android:summary="change background or text colour"
+     android:entries="@array/entries"
+     android:entryValues="@array/evalues">        
+    </ListPreference>
+    
+    <EditTextPreference 
+      android:title="Username"
+      android:key="username"
+      android:summary="This will sychronize with your online account"        
+        />
+   
+     <CheckBoxPreference 
+     android:defaultValue="true"  
+     android:title="Receive Push Notification"
+     android:key="receive"
+     android:summary="Receive Nofification Message when there is an update"/>
+     
+    
+    <Preference 
+     android:title="About"
+     android:key="about"
+     android:icon="@android:drawable/ic_menu_info_details"
+     android:summary="version 1.0"/>
+    
+    
+
+</PreferenceScreen>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">I-Evernote</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_list_note">All Notes</string>
+    <string name="title_activity_view__note">View Note</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_edit_note">Edit Note</string>
+    <string name="title_activity_new_note">New Note</string>
+    <string name="title_activity_text_colour">TextColour</string>
+    <string name="title_activity_backgroud_colour">BackgroudColour</string>
+    <string name="title_activity_about">About</string>
+
+</resources>

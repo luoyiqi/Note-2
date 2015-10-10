@@ -1,0 +1,200 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF99"
+    android:gravity="center_horizontal"
+    tools:context="com.fresh.note.View_Note" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#B04024"
+        android:weightSum="10" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="Created:"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/created_date_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:text="date"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:background="#B04024"
+        android:weightSum="10" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="Last Updated:"
+           
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/last_updated_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:text="date"
+             android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_thick"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/linearLayout3"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_thick"
+        android:background="#B04024"
+        android:weightSum="8" >
+
+        <TextView
+            android:id="@+id/char_count_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="char:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/abc_text_size_small_material" />
+
+        <TextView
+            android:id="@+id/char_count_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/abc_text_size_small_material" />
+
+        <TextView
+            android:id="@+id/word_count_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="word:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/abc_text_size_small_material" />
+
+        <TextView
+            android:id="@+id/word_count_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/abc_text_size_small_material" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/linearLayout1_1"
+        android:layout_below="@+id/linearLayout2" >
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.fresh.note.LinedEditText
+                android:id="@+id/text_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:text="content krg"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/plusone_button" >
+
+        <Button
+            android:id="@+id/btnEdit"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/plusone_button"
+           android:drawableTop="@android:drawable/ic_menu_edit"
+            android:onClick="onClickEdit"
+            android:text="Edit" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/plusone_button"
+            android:drawableTop="@android:drawable/ic_menu_delete"
+            android:onClick="onClickDeleteNote"
+            android:text="Delete" />
+
+        <Button
+            android:id="@+id/btnShare"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/plusone_button"
+            android:drawableTop="@android:drawable/ic_menu_share"
+            android:onClick="onClickShare"
+            android:text="Share" />
+
+        <Button
+            android:id="@+id/btnColour"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/plusone_button"
+            android:drawableTop="@android:drawable/ic_menu_manage"
+            android:text="Colour" 
+            android:onClick="onClickColour"/>
+        <Button
+            android:id="@+id/btnExport"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/plusone_button"
+            android:drawableTop="@android:drawable/ic_menu_set_as"
+            android:text="Export" 
+            android:onClick="onClickExport"/>
+    </LinearLayout>
+
+</RelativeLayout>
